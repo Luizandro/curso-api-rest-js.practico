@@ -1,0 +1,11 @@
+{
+  "name": "curso-api-rest-js.practico",
+  "version": "1.0.0",
+  "description": "Práctica de consumo de API REST",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "LMartin",
+  "license": "MIT"
+}
