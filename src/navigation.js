@@ -8,7 +8,7 @@ trendingBtn.addEventListener('click', () => {
 });
 
 arrowBtn.addEventListener('click', () => {
-    location.hash = '#home';
+    history.back();
 });
 
 
@@ -67,6 +67,10 @@ function trendsPage(){
     categoriesPreviewSection.classList.add('inactive');
     genericSection.classList.remove('inactive');
     movieDetailSection.classList.add('inactive');
+
+    headerCategoryTitle.innerHTML = 'Tendencias';
+
+    getTrendingMovies();
 }
 function searchPage(){
     console.log('SEARCH!!');
@@ -85,7 +89,9 @@ function searchPage(){
     movieDetailSection.classList.add('inactive');
 
     //['#search', 'platzi']
-    const [_, query] = location.hash.split('=');
+    let [_, query] = location.hash.split('=');
+    query = query.replaceAll('%20',' ');
+    console.log(query);
     getMoviesBySearch(query);
 }
 function movileDetailsPage(){
